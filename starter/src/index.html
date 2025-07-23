@@ -13,16 +13,91 @@
 </head>
 
 <body id="body">
-  <header class="header">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header" role="banner">
+    <div class="header__inner container">
+      <a class="header__logo" href="#bio" aria-label="Go to intro section">
+        <!-- inline SVG logo -->
+        <svg ...>...</svg>
+      </a>
+      <nav class="header__nav" aria-label="Primary">
+        <ul class="header__menu">
+          <li><a class="header__link" href="#latest-projects">Projects</a></li>
+          <li><a class="header__link" href="#skills">Skills</a></li>
+          <li><a class="header__link" href="#resume">Resume</a></li>
+          <li><a class="header__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <main id="main">
-    <section id="bio" class="bio">
+  
+  <main id="main" tabindex="-1">
+    <section id="bio" class="bio" aria-labelledby="bio-heading">
+      <div class="container bio__grid">
+        <div class="bio__media">
+          <img src="img/profile.jpg" alt="Photo of Gaby" class="bio__photo">
+        </div>
+        <div class="bio__content">
+          <h1 id="bio-heading" class="bio__title">Hi, I’m Gaby</h1>
+          <p class="bio__blurb">Front‑end developer who loves accessible, performant CSS and clean UI.</p>
+          <div class="bio__cta">
+            <a class="button button--primary" href="#latest-projects">See my work</a>
+            <a class="button button--alt" href="#contact">Let’s talk</a>
+          </div>
+        </div>
+      </div>
     </section>
-    <section id="latest-projects" class="latest-projects">
+  
+    <section id="latest-projects" class="latest-projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <h2 id="projects-heading" class="latest-projects__title">Latest Projects</h2>
+        <ul class="latest-projects__list" role="list">
+          <li class="project-card">
+            <article class="project-card__body">
+              <img src="img/project-1.jpg" alt="Screenshot of Project 1" class="project-card__img" />
+              <div class="project-card__content">
+                <h3 class="project-card__title">Project One</h3>
+                <p class="project-card__desc">Short description...</p>
+                <a class="project-card__link" href="#">View project<span class="visually-hidden"> Project One</span></a>
+              </div>
+            </article>
+          </li>
+          <li class="project-card">
+            <article class="project-card__body">
+              <img src="img/project-1.jpg" alt="Screenshot of Project 1" class="project-card__img" />
+              <div class="project-card__content">
+                <h3 class="project-card__title">Project One</h3>
+                <p class="project-card__desc">Short description...</p>
+                <a class="project-card__link" href="#">View project<span class="visually-hidden"> Project One</span></a>
+              </div>
+            </article>
+          </li>
+          <li class="project-card">
+            <article class="project-card__body">
+              <img src="img/project-1.jpg" alt="Screenshot of Project 1" class="project-card__img" />
+              <div class="project-card__content">
+                <h3 class="project-card__title">Project One</h3>
+                <p class="project-card__desc">Short description...</p>
+                <a class="project-card__link" href="#">View project<span class="visually-hidden"> Project One</span></a>
+              </div>
+            </article>
+          </li>
+          <!-- repeat 2 & 3 -->
+        </ul>
+        <div class="latest-projects__cta">
+          <a class="button button--primary" href="#">See all projects</a>
+        </div>
+      </div>
     </section>
   </main>
-  <footer class="footer">
+  
+  <footer class="footer" role="contentinfo" id="contact">
+    <div class="container footer__inner">
+      <p>&copy; Gaby 2025</p>
+    </div>
   </footer>
+  
 </body>
 
 </html>
