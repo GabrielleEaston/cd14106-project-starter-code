@@ -1,0 +1,21 @@
+@import '../utils/variables';
+
+.button{
+  display:inline-block;
+  padding:.75rem 1.25rem;
+  border-radius:.375rem;
+  text-decoration:none;
+  font-weight:600;
+  line-height:1;
+  transition:background .2s ease, transform .2s ease;
+  &:active{ transform:scale(.97); }
+
+  &--primary{
+    background:$primary; color:#fff;
+    &:hover,&:focus{ background:darken($primary,8%); }
+  }
+  &--alt{
+    background:$accent; color:#fff;
+    &:hover,&:focus{ background:darken($accent,8%); }
+  }
+}

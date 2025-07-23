@@ -1,0 +1,44 @@
+@import '../utils/variables';
+
+.header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:#fff;border-bottom:1px solid $border;
+  transition:padding .2s ease;
+  padding:.75rem 0;
+
+  &--shrink{ padding:.25rem 0; }
+
+  &__inner{
+    @extend .container;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+
+  &__logo {
+    color:$text;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    &:hover,
+    &:focus{ /* just a subtle tint */
+      opacity:.9;
+      color:$primary;
+    }
+  }
+
+  &__menu{
+    display:flex;gap:$space-sm;
+    list-style:none;margin:0;padding:0;
+  }
+
+  &__link{
+    padding:.5rem .75rem;border-radius:.375rem;
+    color:$text;
+    text-decoration:none;
+    border-radius:.375rem;
+    transition:color .2s ease;
+    &:hover,
+    &:focus{
+      color:$primary;
+    }
+  }
+}

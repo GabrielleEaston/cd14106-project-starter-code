@@ -1,0 +1,28 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.latest-projects{
+  padding:$space-xl 0;
+
+  &__title{
+    font-size:2rem;
+    margin:0 0 $space-md;
+    text-align:center;
+  }
+
+  &__list{
+    display:grid;
+    gap:$space-md;
+    grid-template-columns:1fr;
+    padding: 0;
+
+    @include respond(md){
+      grid-template-columns:repeat(3, 1fr);
+    }
+  }
+
+  &__cta{
+    text-align:center;
+    margin-top:$space-lg;
+  }
+}

@@ -1,0 +1,28 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+body{
+  font-family:$font-stack;
+  color:$text;
+  background:$bg;
+  line-height:1.6;
+}
+
+h1,h2,h3{
+  line-height:1.2;
+  margin:0 0 $space-sm;
+}
+
+p{ margin:0 0 $space-sm; }
+
+:focus-visible{ @include focus-ring; }
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce){
+  *{
+    animation-duration:0.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:0.01ms !important;
+    scroll-behavior:auto !important;
+  }
+}

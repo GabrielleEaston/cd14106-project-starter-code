@@ -1,0 +1,42 @@
+@import '../utils/variables';
+
+.project-card{
+  list-style:none;
+  background:#fff;
+  border:1px solid $border;
+  border-radius:.5rem;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  transition:box-shadow .2s ease, transform .2s ease;
+
+  &:hover,
+  &:focus-within{
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
+    transform:translateY(-2px);
+  }
+
+  &__img{
+    aspect-ratio:16/9;
+    object-fit:cover;
+  }
+
+  &__content{ padding:$space-sm; }
+
+  &__title{
+    margin:0 0 .25rem;
+    font-size:1.125rem;
+  }
+
+  &__desc{
+    margin:0 0 .75rem;
+    font-size:.9375rem;
+    color:#555;
+  }
+
+  &__link{
+    font-weight:600;
+    color:$primary;
+    text-decoration:underline;
+  }
+}

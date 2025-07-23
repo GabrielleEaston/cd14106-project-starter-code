@@ -1,0 +1,38 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.bio{
+  padding:$space-xl 0;
+
+  &__grid{
+    display:grid;
+    gap:$space-lg;
+    @include respond(md){
+      grid-template-columns:1fr 1fr;
+      align-items:center;
+    }
+  }
+
+  &__photo{
+    border-radius:1rem;
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
+  }
+
+
+  &__title{
+    font-size:clamp(1.75rem,4vw,3rem);
+    margin:0 0 $space-sm;
+  }
+
+  &__blurb{
+    max-width:42ch;
+    font-size:1.0625rem;
+    margin:0 0 $space-md;
+  }
+
+  &__cta{
+    display:flex;
+    gap:$space-sm;
+    flex-wrap:wrap;
+  }
+}

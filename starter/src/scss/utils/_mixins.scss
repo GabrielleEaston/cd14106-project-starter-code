@@ -1,0 +1,20 @@
+@import '../utils/variables';
+
+@mixin focus-ring {
+    outline: 2px solid $primary;
+    outline-offset: 2px;
+  }
+  
+  @mixin respond($bp) {
+    // simple map of breakpoints
+    $bps: (
+      sm: 36em,  // 576px
+      md: 48em,  // 768px
+      lg: 64em,  // 1024px
+      xl: 80em   // 1280px
+    );
+    @media (min-width: map-get($bps, $bp)) {
+      @content;
+    }
+  }
+  
